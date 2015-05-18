@@ -10,7 +10,7 @@ set autoindent
 set wrap
 set number
 set ruler
-set clipboard+=unnamed,autoselect
+set clipboard+=unnamed  ",autoselect
 set backupdir=~/Documents/Vimfiles/backupfiles
 set directory=~/Documents/Vimfiles/backupfiles
 set undodir=~/Documents/Vimfiles/backupfiles
@@ -20,10 +20,13 @@ set list
 set hlsearch
 set incsearch
 set undofile
-"set cursorline
+set scrolloff=5
+set cursorline
+set showmatch
+set matchtime=1
 "hi CursorLine ctermbg=green 
-filetype plugin indent on
 
+filetype plugin indent on
 "Python
 autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 autocmd FileType python setl tabstop=4 expandtab shiftwidth=4 softtabstop=4
