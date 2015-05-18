@@ -124,6 +124,8 @@ NeoBundle 'tyru/caw.vim'                " コメントのトグル
 NeoBundle 'othree/html5.vim'            " html.erbのオートインデント
 NeoBundle 'tomasr/molokai'              " color scheme
 NeoBundle 'sjl/badwolf'                 " color scheme
+NeoBundle 'scrooloose/nerdtree'         " ツリー形式でディレクトリ構造を表示
+NeoBundle 'nathanaelkane/vim-indent-guides' " インデントに色を付けて見やすくする
 
 call neobundle#end() " Required:
 filetype plugin indent on
@@ -134,10 +136,14 @@ let g:previm_open_cmd = 'open -a Google\ Chrome'    " :PrevimOpen でmarkdownの
 "tyru/caw.vim
 nmap <Leader>c <Plug>(caw:i:toggle)     " gicでコメントアウト
 vmap <Leader>c <Plug>(caw:i:toggle)     " giaで行末コメント追記
-"
+" color scheme
 syntax on
 colorscheme badwolf
-
+" vim-indent-guides
+set background=dark
+let g:indent_guides_enable_on_vim_startup = 1
+hi IndentGuidesOdd  ctermbg=black
+hi IndentGuidesEven ctermbg=darkgrey
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " powerline
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
