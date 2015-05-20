@@ -140,8 +140,8 @@ NeoBundleCheck
 " tyru/open-browser.vim
 let g:previm_open_cmd = 'open -a Google\ Chrome'    " :PrevimOpen でmarkdownのプレビュー
 "tyru/caw.vim
-nmap <Leader>c <Plug>(caw:i:toggle)     " gicでコメントアウト
-vmap <Leader>c <Plug>(caw:i:toggle)     " giaで行末コメント追記
+nmap <Leader>c <Plug>(caw:i:toggle)     " gicでコメントアウト \cでコメント
+vmap <Leader>c <Plug>(caw:i:toggle)     " giaで行末コメント追記 \cでコメント解除
 " color scheme
 syntax on
 colorscheme badwolf
