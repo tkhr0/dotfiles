@@ -130,6 +130,8 @@ NeoBundle 'tomasr/molokai'              " color scheme
 NeoBundle 'sjl/badwolf'                 " color scheme
 NeoBundle 'scrooloose/nerdtree'         " ツリー形式でディレクトリ構造を表示
 NeoBundle 'nathanaelkane/vim-indent-guides' " インデントに色を付けて見やすくする
+NeoBundle 'mattn/emmet-vim'             " html補助
+NeoBundle 'scrooloose/syntastic'        " 構文チェッカーの結果をvimに表示する :SyntasticCheck :Errors pip install flake8
 
 call neobundle#end() " Required:
 filetype plugin indent on
@@ -148,6 +150,9 @@ set background=dark
 let g:indent_guides_enable_on_vim_startup = 1
 hi IndentGuidesOdd  ctermbg=black
 hi IndentGuidesEven ctermbg=darkgrey
+" syntastic
+let g:syntastic_python_checkers = ["flake8"]
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " powerline
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
