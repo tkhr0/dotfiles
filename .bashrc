@@ -4,6 +4,10 @@ alias la="ls -a"
 # for original script
 export PATH=~/bin:$PATH
 
+# for pyenv
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+export PYENV_ROOT=/usr/local/var/pyenv
+
 # for Homebrew php55
 export PATH="$(brew --prefix homebrew/php/php55)/bin:$PATH"
 
