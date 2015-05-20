@@ -2,7 +2,6 @@
 set nocompatible
 set encoding=utf-8
 set fenc=utf-8
-syntax enable
 set expandtab
 set tabstop=4
 set shiftwidth=4
@@ -25,6 +24,11 @@ set cursorline
 set showmatch
 set matchtime=1
 "hi CursorLine ctermbg=green 
+syntax enable
+
+" バッファファイルを切り替える
+:noremap <C-n> bn<CR>
+:noremap <C-p> bp<CR>
 
 filetype plugin indent on
 "Python
