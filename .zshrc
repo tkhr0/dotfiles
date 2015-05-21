@@ -185,6 +185,7 @@ function title {
 # favdir
 source ~/.local/bin/favdir.sh
 
+#########################################
 # finderの隠しファイルトグル
 alias dotshow='killall finder; defaults write com.apple.finder AppleShowAllFiles -boolean true'
 alias dothide='killall finder; defaults delete com.apple.finder AppleShowAllFiles'
@@ -193,7 +194,6 @@ alias dothide='killall finder; defaults delete com.apple.finder AppleShowAllFile
 # lsの色変更
 export LSCOLORS=gxfxcxdxbxegedabagacad
 
-#
 #########################################
 # Git Aliases
 #########################################
