@@ -2,7 +2,6 @@
 set nocompatible
 set encoding=utf-8
 set fenc=utf-8
-syntax enable
 set expandtab
 set tabstop=4
 set shiftwidth=4
@@ -25,6 +24,11 @@ set cursorline
 set showmatch
 set matchtime=1
 "hi CursorLine ctermbg=green 
+syntax enable
+
+" バッファファイルを切り替える
+:noremap <C-n> bn<CR>
+:noremap <C-p> bp<CR>
 
 filetype plugin indent on
 "Python
@@ -126,6 +130,8 @@ NeoBundle 'tomasr/molokai'              " color scheme
 NeoBundle 'sjl/badwolf'                 " color scheme
 NeoBundle 'scrooloose/nerdtree'         " ツリー形式でディレクトリ構造を表示
 NeoBundle 'nathanaelkane/vim-indent-guides' " インデントに色を付けて見やすくする
+NeoBundle 'mattn/emmet-vim'             " html補助
+NeoBundle 'scrooloose/syntastic'        " 構文チェッカーの結果をvimに表示する :SyntasticCheck :Errors pip install flake8
 
 call neobundle#end() " Required:
 filetype plugin indent on
@@ -134,8 +140,8 @@ NeoBundleCheck
 " tyru/open-browser.vim
 let g:previm_open_cmd = 'open -a Google\ Chrome'    " :PrevimOpen でmarkdownのプレビュー
 "tyru/caw.vim
-nmap <Leader>c <Plug>(caw:i:toggle)     " gicでコメントアウト
-vmap <Leader>c <Plug>(caw:i:toggle)     " giaで行末コメント追記
+nmap <Leader>c <Plug>(caw:i:toggle)     " gicでコメントアウト \cでコメント
+vmap <Leader>c <Plug>(caw:i:toggle)     " giaで行末コメント追記 \cでコメント解除
 " color scheme
 syntax on
 colorscheme badwolf
@@ -144,6 +150,9 @@ set background=dark
 let g:indent_guides_enable_on_vim_startup = 1
 hi IndentGuidesOdd  ctermbg=black
 hi IndentGuidesEven ctermbg=darkgrey
+" syntastic
+let g:syntastic_python_checkers = ["flake8"]
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " powerline
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
