@@ -132,6 +132,7 @@ NeoBundle 'scrooloose/nerdtree'         " ツリー形式でディレクトリ�
 NeoBundle 'nathanaelkane/vim-indent-guides' " インデントに色を付けて見やすくする
 NeoBundle 'mattn/emmet-vim'             " html補助
 NeoBundle 'scrooloose/syntastic'        " 構文チェッカーの結果をvimに表示する :SyntasticCheck :Errors pip install flake8
+NeoBundle 'vim-scripts/SearchComplete'  " 検索時にもタブで補完
 
 call neobundle#end() " Required:
 filetype plugin indent on
