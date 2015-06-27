@@ -131,7 +131,8 @@ NeoBundle 'sjl/badwolf'                 " color scheme
 NeoBundle 'scrooloose/nerdtree'         " ツリー形式でディレクトリ構造を表示
 NeoBundle 'nathanaelkane/vim-indent-guides' " インデントに色を付けて見やすくする
 NeoBundle 'mattn/emmet-vim'             " html補助
-NeoBundle 'scrooloose/syntastic'        " 構文チェッカーの結果をvimに表示する :SyntasticCheck :Errors pip install flake8
+                                        " 構文チェッカーの結果をvimに表示する :SyntasticCheck :Errors
+NeoBundle 'scrooloose/syntastic', {'build': {'others': 'pip install flake8'}}
 NeoBundle 'vim-scripts/SearchComplete'  " 検索時にもタブで補完
 NeoBundle 'rhysd/committia.vim'         " gitのcommitコメント補助
 
