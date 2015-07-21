@@ -182,10 +182,6 @@ function title {
 }
 
 #########################################
-# favdir
-source ~/.local/bin/favdir.sh
-
-#########################################
 # finderの隠しファイルトグル
 alias dotshow='killall finder; defaults write com.apple.finder AppleShowAllFiles -boolean true'
 alias dothide='killall finder; defaults delete com.apple.finder AppleShowAllFiles'
