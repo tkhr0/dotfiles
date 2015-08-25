@@ -200,6 +200,7 @@ export LSCOLORS=gxfxcxdxbxegedabagacad
 alias ga='git add'
 alias gaa='git add .'
 alias gaaa='git add -A'
+alias gap='git add -p'
 alias gb='git branch'
 alias gbd='git branch -d '
 alias gc='git commit'
