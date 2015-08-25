@@ -137,6 +137,7 @@ NeoBundle 'vim-scripts/SearchComplete'  " 検索時にもタブで補完
 NeoBundle 'rhysd/committia.vim'         " gitのcommitコメント補助
 NeoBundle 'Shougo/neocomplete.vim'      " 補完
 NeoBundle 'tpope/vim-surround'          " 囲う記号を操作する
+NeoBundle 'wakatime/vim-wakatime'       " WakaTime
 
 call neobundle#end() " Required:
 filetype plugin indent on
