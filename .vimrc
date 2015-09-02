@@ -15,14 +15,17 @@ set directory=~/Documents/Vimfiles/backupfiles
 set undodir=~/Documents/Vimfiles/backupfiles
 set backup
 set writebackup
-set list
+set list                    " 不可視文字の可視化
 set hlsearch
 set incsearch
 set undofile
 set scrolloff=5
 set cursorline
 set showmatch
-set matchtime=1
+set matchtime=1             " 対応括弧のハイライト表示秒数
+set infercase               " 補完時に大文字小文字を区別しない
+set colorcolumn=80          " 80行目にラインを入れる
+set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%,eol:↲  " 不可視文字を代替
 "hi CursorLine ctermbg=green 
 syntax enable
 
