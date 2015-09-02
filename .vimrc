@@ -51,6 +51,21 @@ autocmd BufNewFile *.html 0r $HOME/Documents/Vimfiles/templates/template.html
 autocmd BufWritePre *:%s/\s\+$//ge  " 保存時に行末の空白を除去
 autocmd BufWritePre *:%s/\t/ /ge    " 保存時にtabをスペースに変換する
 
+" ESCを二回押すことでハイライトを消す
+nmap <silent> <Esc><Esc> :nohlsearch<CR>
+
+" 検索後にジャンプした際に検索単語を画面中央に持ってくる
+nnoremap n nzz
+nnoremap N Nzz
+nnoremap * *zz
+nnoremap # #zz
+nnoremap g* g*zz
+nnoremap g# g#zz
+
+" j, k による移動を折り返されたテキストでも自然に振る舞うように変更
+nnoremap j gj
+nnoremap k gk
+
 " Anywhere SID.
 function! s:SID_PREFIX()
   return matchstr(expand('<sfile>'), '<SNR>\d\+_\zeSID_PREFIX$')
