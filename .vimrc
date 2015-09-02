@@ -156,7 +156,13 @@ NeoBundle 'rhysd/committia.vim'         " gitのcommitコメント補助
 NeoBundle 'Shougo/neocomplete.vim'      " 補完
 NeoBundle 'tpope/vim-surround'          " 囲う記号を操作する
 NeoBundle 'wakatime/vim-wakatime'       " WakaTime
-
+NeoBundle "davidhalter/jedi-vim", {
+      \ "autoload": {
+      \   "filetypes": ["python"],
+      \ },
+      \ "build": {
+      \   "others": "pip install jedi",
+      \ }}                              " 補完
 call neobundle#end() " Required:
 filetype plugin indent on
 NeoBundleCheck
@@ -176,7 +182,15 @@ hi IndentGuidesOdd  ctermbg=black
 hi IndentGuidesEven ctermbg=darkgrey
 " syntastic
 let g:syntastic_python_checkers = ["flake8"]
-
+" jedi-vim
+let s:hooks = neobundle#get_hooks("jedi-vim")
+function! s:hooks.on_source(bundle)
+  " jediにvimの設定を任せると'completeopt+=preview'するので
+  " 自動設定機能をOFFにし手動で設定を行う
+  let g:jedi#auto_vim_configuration = 0
+  " 補完の最初の項目が選択された状態だと使いにくいためオフにする
+  let g:jedi#popup_select_first = 0
+endfunction
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " powerline
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -187,4 +201,3 @@ set laststatus=2 " Always display the statusline in all windows
 set showtabline=2 " Always display the tabline, even if there is only one tab
 set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 " -- powerline -------------------------------------------------------------------------
-
