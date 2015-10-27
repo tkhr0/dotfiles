@@ -200,7 +200,9 @@ function! s:hooks.on_source(bundle)
   let g:neocomplete#force_omni_input_patterns.python = '\%([^.  \t]\.\|^\s*@\|^\s*from\s.\+import \|^\s*from \|^\s*import \)\w*'
 endfunction
 " neadtree
-autocmd VimEnter * execute 'NERDTree'
+autocmd VimEnter * NERDTree
+"How can I close vim if the only window left open is a NERDTree?
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " powerline
