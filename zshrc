@@ -134,6 +134,8 @@ alias rm='rm -i'
 
 alias mkdir='mkdir -p'
 
+alias du='du -h'
+
 alias tree='tree -NC'
 
 # sudo の後のコマンドでエイリアスを有効にする
