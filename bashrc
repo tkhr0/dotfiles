@@ -5,6 +5,8 @@ alias la="ls -a"
 export PATH=~/bin:$PATH
 # gcloud
 export PATH=/usr/local/lib/google-cloud-sdk/bin:$PATH
+# golang
+export PATH=$PATH:$(go env GOPATH)/bin
 
 # rbenv
 export RBENV_ROOT="${HOME}/.rbenv"
