@@ -2,7 +2,7 @@
 
 ```
 cd ~
-git clone git@github.com:KarasawaTakahiro/dotfiles.git
+git clone git@github.com:tkhr0/dotfiles.git
 chmod +x dotfiles/setup.sh
 ./dotfiles/setup.sh
 ```
