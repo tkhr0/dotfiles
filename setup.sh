@@ -1,7 +1,7 @@
 #!/bin/bash
 CONFIG_DIR=${XDG_CONFIG_HOME:-$HOME/.config}
 
-DOT_FILES=( bashrc zshrc)
+DOT_FILES=( bashrc zshrc agignore )
 
 for file in ${DOT_FILES[@]}
 do
