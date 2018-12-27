@@ -23,3 +23,6 @@ eval "$(pyenv init -)"
 # ctags
 alias ctags="`brew --prefix`/bin/ctags"
 
+# fzf
+export FZF_DEFAULT_COMMAND='ag -g ""'
+export FZF_DEFAULT_OPTS='--inline-info --reverse --preview "head {}"'
