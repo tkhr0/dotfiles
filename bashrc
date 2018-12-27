@@ -2,6 +2,7 @@ export XDG_CONFIG_HOME=$HOME/.config
 
 # alias
 alias la="ls -a"
+alias vi="nvim"
 
 # original script
 export PATH=~/bin:$PATH
