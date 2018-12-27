@@ -5,7 +5,7 @@ DOT_FILES=( vimrc tmux.conf bashrc zshrc)
 
 for file in ${DOT_FILES[@]}
 do
-  if [ -a $HOME/$file ]; then
+  if [ -e $HOME/.$file ]; then
     ln -s $HOME/dotfiles/$file $HOME/$file.dot
     echo "ファイルが存在します.dotファイル: $file"
   else
