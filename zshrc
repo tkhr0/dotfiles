@@ -1,4 +1,5 @@
 source ~/.bashrc
+
 powerline-daemon -q
 . /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
@@ -10,6 +11,11 @@ export PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
 
 # yarn
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# kubectl completion
+if [ $commands[kubectl] ]; then
+  source <(kubectl completion zsh)
+fi
 
 # helm completion
 source <(helm completion zsh)
@@ -69,11 +75,6 @@ zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin \
 
 # ps コマンドのプロセス名補完
 zstyle ':completion:*:processes' command 'ps x -o pid,s,args'
-
-# kubectl
-if [ $commands[kubectl] ]; then
-  source <(kubectl completion zsh)
-fi
 
 # オプション
 # 日本語ファイル名を表示可能にする
