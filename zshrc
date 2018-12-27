@@ -1,12 +1,18 @@
-######################################## 
-# Powerline
-######################################## 
-export PATH=$PATH:~/Library/Python/2.7/bin
-powerline-daemon -q
-. ~/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
-#======================================
-
 source ~/.bashrc
+powerline-daemon -q
+. /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+
+# nodebrew
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+
+# findutil
+export PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
+
+# yarn
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# helm completion
+source <(helm completion zsh)
 
 ######################################## 
 # 少し凝った zshrc
@@ -64,23 +70,11 @@ zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin \
 # ps コマンドのプロセス名補完
 zstyle ':completion:*:processes' command 'ps x -o pid,s,args'
 
+# kubectl
+if [ $commands[kubectl] ]; then
+  source <(kubectl completion zsh)
+fi
 
-########################################
-# vcs_info
-#autoload -Uz vcs_info
-#autoload -Uz add-zsh-hook
-#
-#zstyle ':vcs_info:*' formats '%F{green}(%s)-[%b]%f'
-#zstyle ':vcs_info:*' actionformats '%F{red}(%s)-[%b|%a]%f'
-#
-#function _update_vcs_info_msg() {
-#    LANG=en_US.UTF-8 vcs_info
-#    RPROMPT="${vcs_info_msg_0_}"
-#}
-#add-zsh-hook precmd _update_vcs_info_msg
-
-
-########################################
 # オプション
 # 日本語ファイル名を表示可能にする
 setopt print_eight_bit
@@ -128,7 +122,8 @@ bindkey '^R' history-incremental-pattern-search-backward
 
 alias ls='ls -G'
 alias la='ls -a'
-alias ll='ls -l'
+alias ll='ls -la'
+alias lla='ls -al'
 
 alias rm='rm -i'
 
@@ -138,12 +133,19 @@ alias du='du -h'
 
 alias tree='tree -NC'
 
+alias grep='grep --color=auto --label=stdin'
+
 # sudo の後のコマンドでエイリアスを有効にする
 alias sudo='sudo '
 
 # グローバルエイリアス
 alias -g L='| less'
 alias -g G='| grep'
+
+# deployer
+alias deploy='dep deploy -vvv'
+
+alias dcom='docker-compose'
 
 # C で標準出力をクリップボードにコピーする
 # mollifier delta blog : http://mollifier.hatenablog.com/entry/20100317/p1
@@ -176,7 +178,7 @@ esac
 
 #########################################
 # cd 後にls
-function chpwd(){ ls -l}
+function chpwd(){ ls -la}
 
 # iTerm2のタブ名を変更
 function title {
@@ -203,13 +205,15 @@ alias gb='git branch'
 alias gbd='git branch -d '
 alias gc='git commit'
 alias gcm='git commit -m'
+alias gca='git commit --amend'
+alias gcan='git commit --amend --no-edit'
 alias gco='git checkout'
 alias gcob='git checkout -b'
 alias gcom='git checkout master'
 alias gd='git diff'
 alias gda='git diff HEAD'
 alias gi='git init'
-alias gl='git log'
+alias gl='git log --pretty=full'
 alias glg='git log --graph --oneline --decorate --all'
 alias gld='git log --pretty=format:"%h %ad %s" --date=short --all'
 alias gm='git merge'
@@ -222,10 +226,34 @@ alias gst='git stash'
 alias gstl='git stash list'
 alias gstp='git stash pop'
 alias gstd='git stash drop'
-alias gfa='git fetch --all'
+alias gf='git fetch -v --progress'
+alias gfa='git fetch --all --prune -v --progress'
+alias gfu='git fetch --prune -v --progress upstream'
+alias grb='git rebase'
+alias grbi='git rebase -i --autosquash'
+alias gcp='git cherry-pick'
+alias gcpc='git cherry-pick --continue'
 
 # ----------------------
 # Git Function
 # ----------------------
 # Git log find by commit message
 function glf() { git log --all --grep="$1"; }
+
+# ----------------------
+# git-foresta
+# https://github.com/takaaki-kasai/git-foresta
+# ----------------------
+function gifo() { git-foresta --style=10 "$@" | less -RSX }
+function gifa() { git-foresta --all --style=10 "$@" | less -RSX }
+compdef _git gifo=git-log
+compdef _git gifa=git-log
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/karasawa/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/karasawa/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/karasawa/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/karasawa/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
