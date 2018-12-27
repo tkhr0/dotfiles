@@ -12,14 +12,6 @@ export PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
 # yarn
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
-# kubectl completion
-if [ $commands[kubectl] ]; then
-  source <(kubectl completion zsh)
-fi
-
-# helm completion
-source <(helm completion zsh)
-
 ######################################## 
 # 少し凝った zshrc
 # License : MIT
@@ -62,6 +54,15 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 # 補完機能を有効にする
 autoload -Uz compinit
 compinit -u
+
+# kubectl completion
+if [ $commands[kubectl] ]; then
+  source <(kubectl completion zsh)
+fi
+
+# helm completion
+source <(helm completion zsh)
+
 
 # 補完で小文字でも大文字にマッチさせる
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
