@@ -64,6 +64,13 @@ repo = 'slim-template/vim-slim'
 on_ft = 'slim'
 
 [[plugins]]
+repo = 'fatih/vim-go'
+on_ft = 'go'
+hook_add = '''
+  set foldlevelstart=99
+'''
+
+[[plugins]]
 repo = 'szw/vim-tags'
 
 [[plugins]]
