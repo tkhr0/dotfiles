@@ -1,7 +1,7 @@
 #!/bin/bash
 CONFIG_DIR=${XDG_CONFIG_HOME:-$HOME/.config}
 
-DOT_FILES=( tmux.conf bashrc zshrc)
+DOT_FILES=( bashrc zshrc)
 
 for file in ${DOT_FILES[@]}
 do
