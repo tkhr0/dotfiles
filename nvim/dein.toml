@@ -1,0 +1,100 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'wsdjeg/dein-ui.vim'
+
+[[plugins]]
+repo = 'haya14busa/dein-command.vim'
+
+[[plugins]]
+repo = 'tomasr/molokai'              # color scheme
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'         # ツリー形式でディレクトリ構造を表示
+
+[[plugins]]
+repo = 'editorconfig/editorconfig-vim'
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+
+[[plugins]]
+repo = 'posva/vim-vue'
+on_ft = 'vue'
+
+[[plugins]]
+repo = 'neomake/neomake'
+hook_add = '''
+    autocmd! BufWritePost * Neomake
+''' 
+
+[[plugins]]
+repo = 'tyru/caw.vim'                # コメントのトグル
+
+#[[plugins]]
+#repo = 'Yggdroot/indentLine'         # インデント表示
+
+[[plugins]]
+repo = 'hail2u/vim-css3-syntax'
+on_ft = ['css', 'scss']
+
+[[plugins]]
+repo = 'pangloss/vim-javascript'
+on_ft = 'javascript'
+
+[[plugins]]
+repo = 'othree/yajs.vim'
+on_ft = 'javascript'
+
+[[plugins]]
+repo = 'cakebaker/scss-syntax.vim'
+on_ft = 'scss'
+
+[[plugins]]
+repo = 'tpope/vim-endwise'
+on_ft = 'ruby'
+
+[[plugins]]
+repo = 'tpope/vim-rails'
+on_ft = 'ruby'
+
+[[plugins]]
+repo = 'slim-template/vim-slim'
+on_ft = 'slim'
+
+[[plugins]]
+repo = 'szw/vim-tags'
+
+[[plugins]]
+repo = 'chr4/nginx.vim'
+on_ft = 'nginx'
+
+[[plugins]]
+repo = 'mustache/vim-mustache-handlebars'
+
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+
+[[plugins]]
+repo = 'mileszs/ack.vim'
+
+[[plugins]]
+repo = 'bling/vim-airline'
+
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+
+hook_add = '''
+  let g:gitgutter_sign_added = '*'
+  let g:gitgutter_sign_modified = '*'
+  let g:gitgutter_sign_removed = '*'
+  let g:gitgutter_grep = 'ag'
+'''
+
+[[plugins]]
+# Ctrl-n で複数選択できる
+repo = 'terryma/vim-multiple-cursors'
+
+[[plugins]]
+repo = 'vim-scripts/ingo-library'
