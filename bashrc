@@ -3,7 +3,7 @@ export XDG_CONFIG_HOME=$HOME/.config
 # alias
 alias la="ls -a"
 
-# for original script
+# original script
 export PATH=~/bin:$PATH
 # gcloud
 export PATH=/usr/local/lib/google-cloud-sdk/bin:$PATH
