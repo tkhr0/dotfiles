@@ -114,9 +114,6 @@ autocmd VimEnter * NERDTree
 "How can I close vim if the only window left open is a NERDTree?
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
-" deoplete
-let g:deoplete#enable_at_startup = 1
-
 " fzf
 set rtp+=/usr/local/opt/fzf
 nmap ; :Buffers<Enter>

@@ -105,3 +105,9 @@ repo = 'terryma/vim-multiple-cursors'
 
 [[plugins]]
 repo = 'vim-scripts/ingo-library'
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+hook_add = '''
+  let g:deoplete#enable_at_startup = 1
+'''
