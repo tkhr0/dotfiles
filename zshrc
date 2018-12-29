@@ -61,7 +61,9 @@ if [ $commands[kubectl] ]; then
 fi
 
 # helm completion
-source <(helm completion zsh)
+if [ $commands[helm] ]; then
+  source <(helm completion zsh)
+fi
 
 
 # 補完で小文字でも大文字にマッチさせる
