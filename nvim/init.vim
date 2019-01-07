@@ -101,6 +101,9 @@ vmap <Leader>c <Plug>(caw:i:toggle)     " giaで行末コメント追記 \cで�
 
 " NERDTree
 let NERDTreeShowHidden=1
+"How can I close vim if the only window left open is a NERDTree?
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
 " indentLine
 let g:indentLine_faster = 1
 let g:indentLine_color_term = 239
@@ -108,11 +111,6 @@ let g:indentLine_color_term = 239
 " color scheme
 syntax on
 colorscheme molokai
-
-" neadtree
-autocmd VimEnter * NERDTree
-"How can I close vim if the only window left open is a NERDTree?
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " fzf
 set rtp+=/usr/local/opt/fzf
