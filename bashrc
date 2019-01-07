@@ -23,6 +23,7 @@ fi
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+export PYENV_VERSION="2.7.13"
 
 # ctags
 alias ctags="`brew --prefix`/bin/ctags"
