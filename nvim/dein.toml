@@ -80,6 +80,11 @@ repo = 'junegunn/fzf.vim'
 
 [[plugins]]
 repo = 'mileszs/ack.vim'
+hook_add = '''
+  if executable('ag')
+    let g:ackprg = 'ag --vimgrep'
+  endif
+'''
 
 [[plugins]]
 repo = 'bling/vim-airline'

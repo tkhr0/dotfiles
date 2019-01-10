@@ -122,9 +122,4 @@ nmap ; :Buffers<Enter>
 nmap ,f :Files<Enter>
 nmap ,t :Tags<Enter>
 
-" ack.vim
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
-endif
-
 nmap ,a :Ag<Enter>
