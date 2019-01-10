@@ -112,4 +112,18 @@ on_ft = 'go'
 repo = 'Shougo/deoplete.nvim'
 hook_add = '''
   let g:deoplete#enable_at_startup = 1
+
+  call deoplete#custom#var('omni', 'input_patterns', {
+          \ 'ruby': ['[^. *\t]\.\w*', '[a-zA-Z_]\w*::'],
+  \ })
+'''
+
+[[plugins]]
+repo = 'autozimu/LanguageClient-neovim'
+rev = 'next'
+build = 'bash install.sh'
+hook_add = '''
+  let g:LanguageClient_serverCommands = {
+      \ 'ruby': ['solargraph', 'stdio'],
+  \ }
 '''
