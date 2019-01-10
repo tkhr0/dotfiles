@@ -40,6 +40,10 @@ hook_add = '''
 
 #[[plugins]]
 #repo = 'Yggdroot/indentLine'         # インデント表示
+#hook_add = '''
+#  let g:indentLine_faster = 1
+#  let g:indentLine_color_term = 239
+#'''
 
 [[plugins]]
 repo = 'hail2u/vim-css3-syntax'

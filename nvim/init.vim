@@ -99,10 +99,6 @@ endif
 
 "End dein Scripts-------------------------
 
-" indentLine
-let g:indentLine_faster = 1
-let g:indentLine_color_term = 239
-
 " color scheme
 syntax on
 colorscheme molokai
