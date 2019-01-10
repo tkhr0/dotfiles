@@ -21,12 +21,6 @@ repo = 'posva/vim-vue'
 on_ft = 'vue'
 
 [[plugins]]
-repo = 'neomake/neomake'
-hook_add = '''
-    autocmd! BufWritePost * Neomake
-''' 
-
-[[plugins]]
 repo = 'tyru/caw.vim'                # コメントのトグル
 
 #[[plugins]]
@@ -127,3 +121,6 @@ hook_add = '''
       \ 'ruby': ['solargraph', 'stdio'],
   \ }
 '''
+
+[[plugins]]
+repo = 'w0rp/ale'
