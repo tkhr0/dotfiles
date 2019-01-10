@@ -12,6 +12,11 @@ repo = 'tomasr/molokai'              # color scheme
 
 [[plugins]]
 repo = 'scrooloose/nerdtree'         # ツリー形式でディレクトリ構造を表示
+hook_add = '''
+  let NERDTreeShowHidden=1
+  "How can I close vim if the only window left open is a NERDTree?
+  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+'''
 
 [[plugins]]
 repo = 'editorconfig/editorconfig-vim'

@@ -103,11 +103,6 @@ endif
 nmap <Leader>c <Plug>(caw:i:toggle)     " gicでコメントアウト \cでコメント
 vmap <Leader>c <Plug>(caw:i:toggle)     " giaで行末コメント追記 \cでコメント解除
 
-" NERDTree
-let NERDTreeShowHidden=1
-"How can I close vim if the only window left open is a NERDTree?
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
 " indentLine
 let g:indentLine_faster = 1
 let g:indentLine_color_term = 239
