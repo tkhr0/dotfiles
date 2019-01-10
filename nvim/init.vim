@@ -122,4 +122,7 @@ nmap ; :Buffers<Enter>
 nmap ,f :Files<Enter>
 nmap ,t :Tags<Enter>
 
-nmap ,a :Ag<Enter>
+" Ag
+if executable('ag')
+  nmap ,a :Ag<Enter>
+endif
