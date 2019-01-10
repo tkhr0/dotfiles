@@ -99,10 +99,6 @@ endif
 
 "End dein Scripts-------------------------
 
-"tyru/caw.vim
-nmap <Leader>c <Plug>(caw:i:toggle)     " gicでコメントアウト \cでコメント
-vmap <Leader>c <Plug>(caw:i:toggle)     " giaで行末コメント追記 \cでコメント解除
-
 " indentLine
 let g:indentLine_faster = 1
 let g:indentLine_color_term = 239

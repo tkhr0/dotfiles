@@ -31,6 +31,12 @@ on_ft = 'toml'
 
 [[plugins]]
 repo = 'tyru/caw.vim'                # コメントのトグル
+hook_add = '''
+  " gicでコメントアウト \cでコメント
+  nmap <Leader>c <Plug>(caw:i:toggle)
+  " giaで行末コメント追記 \cでコメント解除
+  vmap <Leader>c <Plug>(caw:i:toggle)
+'''
 
 #[[plugins]]
 #repo = 'Yggdroot/indentLine'         # インデント表示
