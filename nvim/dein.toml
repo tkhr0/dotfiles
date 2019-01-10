@@ -17,9 +17,6 @@ repo = 'scrooloose/nerdtree'         # ツリー形式でディレクトリ構�
 repo = 'editorconfig/editorconfig-vim'
 
 [[plugins]]
-repo = 'Shougo/deoplete.nvim'
-
-[[plugins]]
 repo = 'posva/vim-vue'
 on_ft = 'vue'
 
