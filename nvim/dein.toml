@@ -151,3 +151,7 @@ hook_add = '''
 
   let g:ale_fix_on_save = 1
 '''
+
+[[plugins]]
+repo = 'leafgarland/typescript-vim'
+on_ft = 'typescript'
