@@ -29,5 +29,5 @@ export PYENV_VERSION="2.7.13"
 alias ctags="`brew --prefix`/bin/ctags"
 
 # fzf
-export FZF_DEFAULT_COMMAND='ag -g ""'
+export FZF_DEFAULT_COMMAND='ag --hidden --filename-pattern ""'
 export FZF_DEFAULT_OPTS='--inline-info --reverse --preview "head {}"'
