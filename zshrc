@@ -3,9 +3,6 @@ source ~/.bashrc
 powerline-daemon -q
 . /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
-# nodebrew
-export PATH=$HOME/.nodebrew/current/bin:$PATH
-
 # findutil
 export PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
 
