@@ -36,6 +36,7 @@ set colorcolumn=80          " 80行目にラインを入れる
 set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%,eol:↲  " 不可視文字を代替
 set fileencodings=utf-8,sjs,default,
 set foldmethod=indent
+set ambiwidth=double
 
 filetype plugin indent on
 
