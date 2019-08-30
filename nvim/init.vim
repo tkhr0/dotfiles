@@ -40,6 +40,8 @@ set foldmethod=indent
 filetype plugin indent on
 
 autocmd BufRead,BufNewFile *.slim setfiletype slim
+autocmd BufRead,BufNewFile *.yaml setfiletype yaml
+autocmd BufRead,BufNewFile *.yml setfiletype yaml
 
 " auto reload
 autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif
