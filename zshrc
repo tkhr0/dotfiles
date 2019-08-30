@@ -150,6 +150,9 @@ alias -g G='| grep'
 alias deploy='dep deploy -vvv'
 
 alias dcom='docker-compose'
+alias dm='docker-compose'
+alias kl='kubectl'
+alias kx='kubectx'
 
 # C で標準出力をクリップボードにコピーする
 # mollifier delta blog : http://mollifier.hatenablog.com/entry/20100317/p1
