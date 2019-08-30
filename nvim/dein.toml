@@ -141,12 +141,20 @@ hook_add = '''
       \ 'go': ['golsp'],
   \ }
 '''
+# npm install -g typescript typescript-language-server
 
 [[plugins]]
 repo = 'w0rp/ale'
 hook_add = '''
+  let g:ale_lint_on_text_changed = 0
+  let g:ale_linters = {
+    \ 'javascript': ['eslint']
+  \ }
+
   let g:ale_fixers = {
-    \ 'ruby': ['rubocop']
+    \ 'ruby': ['rubocop'],
+    \ 'typescript': ['tslint'],
+    \ 'scss': ['stylelint']
   \ }
 
   let g:ale_fix_on_save = 1
@@ -154,4 +162,8 @@ hook_add = '''
 
 [[plugins]]
 repo = 'leafgarland/typescript-vim'
+on_ft = 'typescript'
+
+[[plugins]]
+repo = 'ryanolsonx/vim-lsp-typescript'
 on_ft = 'typescript'
