@@ -6,3 +6,7 @@ if which cargo ; then
   cargo +nightly install racer
   rustup component add rls-preview rust-analysis rust-src
 fi
+
+if which yarn ; then
+  yarn global add typescript-language-server
+fi
