@@ -44,6 +44,7 @@ autocmd BufRead,BufNewFile *.slim setfiletype slim
 autocmd BufRead,BufNewFile *.yaml setfiletype yaml
 autocmd BufRead,BufNewFile *.yml setfiletype yaml
 autocmd BufRead,BufNewFile *.blade.php setfiletype blade
+autocmd BufRead,BufNewFile *.coffee setfiletype coffee
 
 " auto reload
 autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif

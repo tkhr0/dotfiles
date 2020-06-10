@@ -181,3 +181,11 @@ on_ft = 'blade'
 
 [[plugins]]
 repo ='k0kubun/vim-open-github'
+
+[[plugins]]
+repo = 'kchmck/vim-coffee-script'
+of_ft = 'coffee'
+hook_add = '''
+  let coffee_make_options = '--output /tmp/'
+  let coffee_compile_vert = 1
+'''
