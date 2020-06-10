@@ -12,19 +12,6 @@ export PATH=/usr/local/lib/google-cloud-sdk/bin:$PATH
 export GOPATH=$(go env GOPATH)
 export PATH=$PATH:$GOPATH/bin
 
-# rbenv
-export RBENV_ROOT="${HOME}/.rbenv"
-if [ -d "${RBENV_ROOT}" ]; then
-  export PATH="${RBENV_ROOT}/bin:${PATH}"
-  eval "$(rbenv init -)"
-fi
-
-# pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-export PYENV_VERSION="2.7.13"
-
 # ctags
 alias ctags="`brew --prefix`/bin/ctags"
 
