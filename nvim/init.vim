@@ -1,7 +1,3 @@
-let g:python_host_prog='/Users/karasawa/.pyenv/versions/neovim2/bin/python'
-let g:python3_host_prog='/Users/karasawa/.pyenv/versions/neovim3/bin/python'
-"let g:loaded_python3_provider=1
-
 set t_Co=256
 set laststatus=2
 set showtabline=2
