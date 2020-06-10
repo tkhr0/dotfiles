@@ -134,6 +134,7 @@ hook_post_update = '''
 repo = 'autozimu/LanguageClient-neovim'
 rev = 'next'
 build = 'bash install.sh'
+on_ft = ['ruby', 'go', 'rust', 'typescript', 'javascript']
 hook_add = '''
   set hidden
   let g:LanguageClient_serverCommands = {
