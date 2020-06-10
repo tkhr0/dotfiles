@@ -178,3 +178,6 @@ on_ft = 'typescript'
 [[plugins]]
 repo = 'jwalton512/vim-blade'
 on_ft = 'blade'
+
+[[plugins]]
+repo ='k0kubun/vim-open-github'
