@@ -9,6 +9,9 @@ export PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
 # yarn
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
+# asdf
+. $(brew --prefix asdf)/asdf.sh
+
 # rust
 export PATH="$HOME/.cargo/bin:$PATH"
 
