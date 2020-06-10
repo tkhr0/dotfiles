@@ -81,10 +81,6 @@ if dein#load_state('~/.cache/dein')
   " Required:
   call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
 
-  " Add or remove your plugins here:
-  call dein#add('Shougo/neosnippet.vim')
-  call dein#add('Shougo/neosnippet-snippets')
-
   call dein#load_toml('~/.config/nvim/dein.toml', { 'lazy': 0 })
   call dein#load_toml('~/.config/nvim/dein_lazy.toml', { 'lazy': 1 })
 
