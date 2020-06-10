@@ -272,3 +272,6 @@ if [ -f '/Users/karasawa/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then 
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# iTerm2 integration
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
