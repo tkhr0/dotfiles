@@ -139,6 +139,7 @@ hook_add = '''
   let g:LanguageClient_serverCommands = {
       \ 'ruby': ['~/.asdf/shims/solargraph', 'stdio'],
       \ 'go': ['golsp'],
+      \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
   \ }
 
   nnoremap <F5> :call LanguageClient_contextMenu()<CR>
@@ -149,6 +150,21 @@ hook_add = '''
   nnoremap <leader>lt :call LanguageClient#textDocument_typeDefinition()<CR>
 '''
 # npm install -g typescript typescript-language-server
+
+[[plugins]]
+repo = 'rust-lang/rust.vim'
+on_ft = 'rust'
+hook_add = '''
+  let g:rustfmt_autosave = 1
+'''
+
+[[plugins]]
+repo = 'racer-rust/vim-racer'
+hook_add = '''
+  set hidden
+  let g:racer_cmd = '~/.cargo/bin/racer'
+  let g:racer_experimental_completer = 1
+'''
 
 [[plugins]]
 repo = 'w0rp/ale'
