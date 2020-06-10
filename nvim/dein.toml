@@ -120,11 +120,14 @@ repo = 'vim-scripts/ingo-library'
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
 hook_add = '''
-  let g:deoplete#enable_at_startup = 1
-
+  let g:deoplete#enable_at_startup = 0
+  autocmd InsertEnter * call deoplete#enable()
   call deoplete#custom#var('omni', 'input_patterns', {
           \ 'ruby': ['[^. *\t]\.\w*', '[a-zA-Z_]\w*::'],
   \ })
+'''
+hook_post_update = '''
+  :UpdateRemotePlugins
 '''
 
 [[plugins]]
