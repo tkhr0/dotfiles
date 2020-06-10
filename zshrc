@@ -49,7 +49,7 @@ autoload -Uz select-word-style
 select-word-style default
 # ここで指定した文字は単語区切りとみなされる
 # / も区切りと扱うので、^W でディレクトリ１つ分を削除できる
-zstyle ':zle:*' word-chars " /=;@:{},|"
+zstyle ':zle:*' word-chars " /=;@:{},|-_"
 zstyle ':zle:*' word-style unspecified
 
 ########################################
