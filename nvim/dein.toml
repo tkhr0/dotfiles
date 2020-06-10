@@ -160,7 +160,7 @@ hook_add = '''
 
   let g:ale_fixers = {
     \ 'ruby': ['rubocop'],
-    \ 'typescript': ['tslint'],
+    \ 'typescript': ['eslint'],
     \ 'scss': ['stylelint']
   \ }
 
