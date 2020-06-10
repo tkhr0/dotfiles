@@ -84,10 +84,6 @@ hook_add = '''
 repo = 'szw/vim-tags'
 
 [[plugins]]
-repo = 'chr4/nginx.vim'
-on_ft = 'nginx'
-
-[[plugins]]
 repo = 'mustache/vim-mustache-handlebars'
 
 [[plugins]]
