@@ -1,4 +1,5 @@
 export XDG_CONFIG_HOME=$HOME/.config
+export GIT_EDITOR=nvim
 
 # alias
 alias la="ls -a"

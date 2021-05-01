@@ -28,7 +28,7 @@ set cursorline
 set showmatch
 set matchtime=1             " 対応括弧のハイライト表示秒数
 set infercase               " 補完時に大文字小文字を区別しない
-set colorcolumn=80          " 80行目にラインを入れる
+set colorcolumn=100         " 100行目にラインを入れる
 set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%,eol:↲  " 不可視文字を代替
 set fileencodings=utf-8,sjs,default,
 set foldmethod=indent

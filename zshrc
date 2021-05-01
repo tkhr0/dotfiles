@@ -282,3 +282,27 @@ if [ -f '/Users/karasawa/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then 
 
 # iTerm2 integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# exa
+if [ "$(command -v exa)" ]; then
+  unalias -m 'll'
+  unalias -m 'l'
+  unalias -m 'la'
+  unalias -m 'ls'
+  alias ls='exa -G  --color auto -s type'
+  alias ll='exa -l --color always -s type'
+  alias lla='exa -l --color always -a -s type'
+  export EXA_COLORS="di=36"
+fi
+
+# bat
+if [ "$(command -v bat)" ]; then
+  unalias -m 'cat'
+  alias cat='bat -pp --theme="Nord"'
+fi
+
+# zoxide
+if [ "$(command -v zoxide)" ]; then
+  eval "$(zoxide init zsh)"
+  export _ZO_FZF_OPTS="--reverse --height 30"
+fi

@@ -1,7 +1,4 @@
 [[plugins]]
-repo = 'Shougo/dein.vim'
-
-[[plugins]]
 repo = 'wsdjeg/dein-ui.vim'
 
 [[plugins]]
@@ -14,6 +11,7 @@ repo = 'tomasr/molokai'              # color scheme
 repo = 'scrooloose/nerdtree'         # ツリー形式でディレクトリ構造を表示
 hook_add = '''
   let NERDTreeShowHidden=1
+  let g:NERDTreeQuitOnOpen=0
   "How can I close vim if the only window left open is a NERDTree?
   autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 '''
@@ -58,6 +56,14 @@ repo = 'othree/yajs.vim'
 on_ft = 'javascript'
 
 [[plugins]]
+repo = 'peitalin/vim-jsx-typescript'
+on_ft = 'jsx'
+
+[[plugins]]
+repo = 'jparise/vim-graphql'
+on_ft = 'typescript'
+
+[[plugins]]
 repo = 'cakebaker/scss-syntax.vim'
 on_ft = 'scss'
 
@@ -87,7 +93,13 @@ repo = 'szw/vim-tags'
 repo = 'mustache/vim-mustache-handlebars'
 
 [[plugins]]
+repo = 'junegunn/fzf'
+build = './install --all'
+merged = 0 
+
+[[plugins]]
 repo = 'junegunn/fzf.vim'
+depends = 'fzf'
 
 [[plugins]]
 repo = 'mileszs/ack.vim'
@@ -117,18 +129,22 @@ repo = 'terryma/vim-multiple-cursors'
 [[plugins]]
 repo = 'vim-scripts/ingo-library'
 
-[[plugins]]
-repo = 'Shougo/deoplete.nvim'
-hook_add = '''
-  let g:deoplete#enable_at_startup = 0
-  autocmd InsertEnter * call deoplete#enable()
-  call deoplete#custom#var('omni', 'input_patterns', {
-          \ 'ruby': ['[^. *\t]\.\w*', '[a-zA-Z_]\w*::'],
-  \ })
-'''
-hook_post_update = '''
-  :UpdateRemotePlugins
-'''
+# [[plugins]]
+# repo = 'Shougo/deoplete.nvim'
+# hook_add = '''
+#  let g:deoplete#enable_at_startup = 0
+#  autocmd InsertEnter * call deoplete#enable()
+#  "call deoplete#custom#var('omni', 'input_patterns', {
+#  "        \ 'ruby': ['[^. *\t]\.\w*', '[a-zA-Z_]\w*::'],
+#  "\ })
+# '''
+# hook_post_update = '''
+#  :UpdateRemotePlugins
+# '''
+
+# [[plugins]]
+# repo = 'tbodt/deoplete-tabnine'
+# build = './install.sh'
 
 [[plugins]]
 repo = 'autozimu/LanguageClient-neovim'
@@ -173,14 +189,23 @@ repo = 'w0rp/ale'
 hook_add = '''
   let g:ale_lint_on_text_changed = 0
   let g:ale_linters = {
+    \ 'python': ['flake8'],
     \ 'javascript': ['eslint']
   \ }
+  let g:ale_python_flake8_executable = 'python'
+  let g:ale_python_flake8_options = '-m flake8'
+  let g:ale_python_flake8_use_global = 1
 
   let g:ale_fixers = {
-    \ 'ruby': ['rubocop'],
     \ 'typescript': ['eslint'],
-    \ 'scss': ['stylelint']
+    \ 'ruby': ['rubocop'],
+    \ 'scss': ['stylelint'],
+    \ 'python': ['autopep8']
   \ }
+  let g:ale_ruby_rubocop_options =  '--auto-correct-all'
+  let g:ale_python_autopep8_executable = 'python'
+  let g:ale_python_autopep8_options = '-m autopep8'
+  let g:ale_python_autopep8_use_global = 1
 
   let g:ale_fix_on_save = 1
 '''
@@ -203,3 +228,7 @@ hook_add = '''
   let coffee_make_options = '--output /tmp/'
   let coffee_compile_vert = 1
 '''
+
+[[plugins]]
+repo = 'vim-python/python-syntax'
+of_ft = 'python'
