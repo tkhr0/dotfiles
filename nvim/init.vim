@@ -28,9 +28,10 @@ set cursorline
 set showmatch
 set matchtime=1             " 対応括弧のハイライト表示秒数
 set infercase               " 補完時に大文字小文字を区別しない
-set colorcolumn=100         " 100行目にラインを入れる
+set colorcolumn=120         " 120行目にラインを入れる
 set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%,eol:↲  " 不可視文字を代替
 set fileencodings=utf-8,sjs,default,
+set foldlevel=99
 set foldmethod=indent
 set ambiwidth=double
 
@@ -41,6 +42,7 @@ autocmd BufRead,BufNewFile *.yaml setfiletype yaml
 autocmd BufRead,BufNewFile *.yml setfiletype yaml
 autocmd BufRead,BufNewFile *.blade.php setfiletype blade
 autocmd BufRead,BufNewFile *.coffee setfiletype coffee
+autocmd BufRead,BufNewFile *.graphql setfiletype graphql
 
 " auto reload
 autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif
@@ -93,12 +95,7 @@ syntax enable
 if dein#check_install()
   call dein#install()
 endif
-
 "End dein Scripts-------------------------
-
-" color scheme
-syntax on
-colorscheme molokai
 
 " fzf
 set rtp+=/usr/local/opt/fzf
