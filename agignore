@@ -1,2 +1,5 @@
 node_modules
 .git
+*.pyc
+*.min.js
+*.min.js.map

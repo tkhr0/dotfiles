@@ -7,11 +7,6 @@ alias vi="nvim"
 
 # original script
 export PATH=~/bin:$PATH
-# gcloud
-export PATH=/usr/local/lib/google-cloud-sdk/bin:$PATH
-# golang
-export GOPATH=$(go env GOPATH)
-export PATH=$PATH:$GOPATH/bin
 
 # ctags
 alias ctags="`brew --prefix`/bin/ctags"
@@ -19,3 +14,11 @@ alias ctags="`brew --prefix`/bin/ctags"
 # fzf
 export FZF_DEFAULT_COMMAND='ag --hidden --filename-pattern ""'
 export FZF_DEFAULT_OPTS='--inline-info --reverse --preview "head {}"'
+
+# ruby-build
+export optflags="-Wno-error=implicit-function-declaration"
+export LDFLAGS="-L$(brew --prefix libffi)/lib"
+export CPPFLAGS="-I$(brew --prefix libffi)/include"
+export PKG_CONFIG_PATH="$(brew --prefix libffi)/lib/pkgconfig"
+
+. "$HOME/.cargo/env"

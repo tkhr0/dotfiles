@@ -1,0 +1,30 @@
+{
+    "languageserver": {
+        "rust": {
+            "command": "rust-analyzer",
+            "filetypes": [
+                "rust"
+            ],
+            "rootPatterns": [
+                "Cargo.toml"
+            ]
+        },
+        "graphql": {
+            "command": "graphql-lsp",
+            "args": ["server", "-m", "stream"],
+            // customize filetypes to your needs
+            "filetypes": ["typescript", "typescriptreact", "graphql"],
+            "settings": {
+                "graphql-config.load.legacy": true
+            }
+        }
+    },
+    "suggest.triggerAfterInsertEnter": true,
+    "suggest.noselect": true,
+    "suggest.minTriggerInputLength": 2,
+    "suggest.acceptSuggestionOnCommitCharacter": true,
+    "diagnostic.checkCurrentLine": true,
+    "diagnostic.virtualTextCurrentLineOnly": false,
+    "rust-analyzer.imports.granularity.group": "crate",
+    "rust-analyzer.imports.prefix": "crate"
+}

@@ -14,7 +14,7 @@ export PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # asdf
-. $(brew --prefix asdf)/asdf.sh
+. $(brew --prefix asdf)/libexec/asdf.sh
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/usr/local/lib/google-cloud-sdk/path.zsh.inc' ]; then . '/usr/local/lib/google-cloud-sdk/path.zsh.inc'; fi
@@ -163,8 +163,8 @@ alias -g G='| grep'
 # deployer
 alias deploy='dep deploy -vvv'
 
-alias dcom='docker-compose'
-alias dm='docker-compose'
+alias dcom='docker compose'
+alias dm='docker compose'
 alias kl='kubectl'
 alias kx='kubectx'
 
@@ -253,6 +253,7 @@ alias gfa='git fetch --all --prune -v --progress'
 alias gfu='git fetch --prune -v --progress upstream'
 alias grb='git rebase'
 alias grbi='git rebase -i --autosquash'
+alias grbis='git rebase -i --autosquash --autostash'
 alias gcp='git cherry-pick'
 alias gcpc='git cherry-pick --continue'
 
@@ -306,3 +307,6 @@ if [ "$(command -v zoxide)" ]; then
   eval "$(zoxide init zsh)"
   export _ZO_FZF_OPTS="--reverse --height 30"
 fi
+
+# To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
+[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
